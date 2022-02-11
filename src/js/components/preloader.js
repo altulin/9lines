@@ -1,5 +1,5 @@
 const preloader = () => {
-	console.log(12121);
+	console.log(44);
 };
 
 export default preloader;
