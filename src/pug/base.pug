@@ -4,9 +4,9 @@ block vars
 	-
 		var baseDir = './'
 	-
-		var title = typeof title !== 'undefined' ? title : null
-		var description = typeof description !== 'undefined' ? description : null
-		var image = typeof image !== 'undefined' ? image : null
+		var title = typeof title !== 'undefined' ? title : 'Команда веб-разработки «Девять линий»'
+		var description = typeof description !== 'undefined' ? description : 'Frontend-разработка и интеграция на CMS для медиа и дизайн-агентств'
+		var image = typeof image !== 'undefined' ? image : '/images/share.png'
 	-
 		var html = {
 			attrs: {
@@ -34,8 +34,8 @@ block vars
 				email: true,
 				telephone: true
 			},
-			keywords: [],
-			msapplicationTileColor: null,
+			keywords: ['frontend', 'psd to html', 'верстка', 'субподряд', 'html', 'frontend аутсорсинг'],
+			msapplicationTileColor: 'da532c',
 			msapplicationTileImage: null,
 			msapplicationNotification: null,
 			msapplicationSquare70x70logo: null,
@@ -53,7 +53,7 @@ block vars
 			ogTitle: title,
 			ogType: 'website',
 			ogUrl: null,
-			themeColor: null,
+			themeColor: '#ffffff',
 			twitterCard: 'summary_large_image',
 			twitterSite: null,
 			twitterCreator: null,
@@ -81,7 +81,7 @@ block vars
 			appleTouchIcon167x167: null,
 			appleTouchIcon180x180: null,
 			appleTouchIcon1024x1024: null,
-			appleTouchIconPrecomposed: null,
+			appleTouchIconPrecomposed: '/apple-touch-icon.png',
 			appleTouchIconPrecomposed40x40: null,
 			appleTouchIconPrecomposed57x57: null,
 			appleTouchIconPrecomposed58x58: null,
@@ -98,18 +98,18 @@ block vars
 			appleTouchIconPrecomposed180x180: null,
 			appleTouchIconPrecomposed1024x1024: null,
 			icon: null,
-			icon16x16: null,
-			icon32x32: null,
+			icon16x16: '/favicon-16x16.png',
+			icon32x32: '/favicon-32x32.png',
 			icon96x96: null,
 			icon128x128: null,
 			icon192x192: null,
 			icon194x194: null,
 			icon196x196: null,
 			imageSrc: image,
-			manifest: null,
+			manifest: '/site.webmanifest',
 			maskIcon: {
-				href: null,
-				color: null
+				href: '/safari-pinned-tab.svg',
+				color: '#5bbad5'
 			}
 		}
 

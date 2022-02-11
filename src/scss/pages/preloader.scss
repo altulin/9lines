@@ -1,0 +1,34 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 50;
+	background-color: $color-blue;
+}
+
+.preloader__logo {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 20vh;
+	height: 2.55556 vh;
+	transform: translate(-50%, -50%);
+}
+
+.preloader__status {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-family: "SourceCodePro", monospace;
+	font-size: 24.44444vh;
+	line-height: 24.44444vh;
+	letter-spacing: -0.55556vh;
+	color: $color-white;
+	opacity: 0.03;
+	transform: translate(-50%, -50%);
+}
+
+.preloader__status__number {
+}

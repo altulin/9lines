@@ -368,14 +368,14 @@ gulp.task('watch', () => {
 		'src/pug/**/*.pug',
 	], {
 		delay: 0,
-	}, gulp.series('pug'))
+	}, gulp.series('lint:pug', 'pug'))
 		.on('all', (event, file) => {
 			global.emittyPugChangedFile = event === 'unlink' ? undefined : file;
 		});
 
-	gulp.watch('src/scss/**/*.scss', gulp.series('scss'));
+	gulp.watch('src/scss/**/*.scss', gulp.series('lint:scss', 'scss'));
 
-	gulp.watch('src/js/**/*.js', gulp.series('js'));
+	gulp.watch('src/js/**/*.js', gulp.series('lint:js', 'js'));
 });
 
 gulp.task('serve', () => {
