@@ -8,6 +8,11 @@ import header from './components/header';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import preloader from './components/preloader';
+import makeHover from './components/nav-menu';
+import createAppSliderMain from './components/appSliderMain';
+import createAppSliderPartner from './components/appSliderPartner';
+import addMask from './components/mask';
+// import {animationHeader} from './components/animation';
 
 ieFix();
 vhFix();
@@ -19,3 +24,7 @@ header.init();
 lazyLoading.init();
 
 preloader();
+makeHover();
+createAppSliderMain();
+createAppSliderPartner();
+addMask();

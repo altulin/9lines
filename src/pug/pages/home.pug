@@ -1,9 +1,69 @@
 main.page-main
+	h1.visually-hidden Команда веб-разработки «Девять линий»
 	section.preloader
 		.preloader__logo
 			+svg('logo')
 		.preloader__status
 			span.preloader__status__number 100
+
+	section.controls
+		a.controls__link.controls__link--letter(href="mailto:info@ninelines.agency" data-text="Написать")
+			span.controls__text Написать нам письмо
+		a.controls__link.controls__link--oferta(href="/oferta.pdf" target=_blank data-text="Публичная оферта")
+			span.controls__text Публичная оферта
+		a.controls__link.controls__link--lang(href="http://ninelines.agency/en" data-text="EN")
+			span.controls__text EN
+
+	.app.swiper
+		.app__inner.swiper-wrapper
+			section.app__page.app-page.partner.swiper-slide
+				.app-page__inner.app-page__container
+					h2.app-page__title.app-page__title--partner Технический партнер медиа и сми в разработке спецпроектов и промо
+
+					.partner__slider.partner-slider.swiper
+						.partner-slider__inner.swiper-wrapper
+							.partner-slider__item.partner-item.swiper-slide
+								.partner-item__inner
+									.partner-item__block.partner-block
+										.partner-block__top
+											h3.partner-block__title Проект
+												|
+												|
+												a.partner-block__link(href="/") для Samsung
+											.partner-block__brand
+												.partner-block__logo
+													img.partner-block__logo-img(src="./images/rbk.png" alt="rbk" width=60 height=16)
+
+										p.partner-block__info Реализовали техническую часть спецпроекта Samsung и РБК
+
+									.partner-item__picture.partner-picture
+										figure.partner-picture__img-wrap
+											img.partner-picture__img(src="./images/img-rf.jpg" alt="Россия без границ")
+											span.partner-picture__circle
+												<svg width="374" height="374" viewBox="0 0 374 374" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="187" cy="187" r="186" stroke="#00D741" stroke-width="2"/>
+												</svg>
+
+								.partner-item__ltd-wrap
+									figure.partner-item__ltd
+
+						button.partner-slider__btn.partner-slider__btn--prev(type="button")
+						button.partner-slider__btn.partner-slider__btn--next(type="button")
+
+			button.partner__btn.partner-btn(type="button")
+				span.partner-btn__text Скролльте вниз
+
+			section.app__page.app-page.promo.swiper-slide
+				.app-page__inner.app-page__container
+					h2.app-page__title промо
+			section.app__page.app-page.promo.swiper-slide
+				.app-page__inner.app-page__container
+					h2.app-page__title Технический партнер м11111111111111111111111
+			section.app__page.app-page.promo.swiper-slide
+				.app-page__inner.app-page__container
+					h2.app-page__title 5555555555555555555555555555555555555
+					5555555555555555555555555555555555555555555555
+
 	//- +lazyPicture({
 	//- 	src: `${baseDir}images/mem.jpg`,
 	//- 	alt: 'Мемчик',

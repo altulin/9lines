@@ -1,5 +1,8 @@
+const {all} = require('core-js/fn/promise');
+
 module.exports = {
 	singleQuote: true,
 	bracketSpacing: false,
-	trailingComma: true,
+	trailingComma: all,
+	semi: true,
 };

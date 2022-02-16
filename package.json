@@ -45,7 +45,7 @@
 		"gulp-w3c-html-validator": "5.0.1",
 		"gulp-zip": "5.1.0",
 		"gulp.spritesmith": "6.12.1",
-        "mozjpeg": "7.0.0",
+		"mozjpeg": "7.0.0",
 		"lint-staged": "11.1.1",
 		"merge-stream": "2.0.0",
 		"node-sass": "6.0.1",
@@ -68,6 +68,7 @@
 		"@babel/runtime": "7.14.8",
 		"body-scroll-lock": "3.1.5",
 		"core-js": "3.15.2",
+		"gsap": "3.9.1",
 		"husky": "7.0.1",
 		"jquery": "3.6.0",
 		"lozad": "1.16.0",
@@ -76,7 +77,9 @@
 		"normalize.css": "8.0.1",
 		"object-fit-images": "3.2.4",
 		"object-fit-videos": "1.0.4",
-		"svg4everybody": "2.1.9"
+		"rfs": "9.0.6",
+		"svg4everybody": "2.1.9",
+		"swiper": "8.0.6"
 	},
 	"husky": {
 		"hooks": {

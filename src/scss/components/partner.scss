@@ -1,0 +1,282 @@
+.app {
+	&__page {
+		height: auto;
+	}
+}
+
+.app-page {
+	&__inner {
+		position: relative;
+		flex: 1;
+	}
+
+	&__container {
+		margin: 0 auto;
+		max-width: 1440px;
+	}
+
+	&__title {
+		@include font-size(3.437rem);
+
+		margin-top: 0;
+		margin-bottom: 0;
+
+		&--partner {
+			position: absolute;
+			left: 122px;
+			top: 75px;
+			max-width: 47%;
+
+			@media (max-width: 1440px) {
+				left: 50px;
+			}
+		}
+	}
+}
+
+.partner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__btn {
+		position: absolute;
+		left: 50%;
+		bottom: 20px;
+		z-index: 5;
+		outline: none;
+		border: none;
+		width: 160px;
+		height: 50px;
+		box-shadow: none;
+		font-family: "Circe", sans-serif;
+		font-weight: 700;
+		font-size: 13px;
+		letter-spacing: 1.01px;
+		text-transform: uppercase;
+		color: #00284b;
+		background-color: transparent;
+		transform: translateX(-50%);
+	}
+}
+
+.partner-slider {
+	&__inner {
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+
+	&__btn {
+		position: absolute;
+		right: 318px;
+		z-index: 5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		outline: none;
+		border: none;
+		border-radius: 50%;
+		width: 44px;
+		height: 44px;
+		box-shadow: none;
+		background-color: transparent;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: relative;
+			z-index: 1;
+			border: 2px solid #00d741;
+			border-radius: 50%;
+			width: 12px;
+			height: 12px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 0;
+			border: 2px solid #00284b;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			opacity: 0;
+			transform: translate(-50%, -50%) scale(0);
+			transition: all 0.15s ease-in-out;
+		}
+
+		&:hover::after {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
+		}
+
+		@include laptop {
+			right: 20px;
+		}
+	}
+
+	&__btn--prev {
+		top: 0;
+	}
+
+	&__btn--next {
+		bottom: 0;
+	}
+}
+
+.partner-item {
+	position: relative;
+
+	&__inner {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		margin: 0 auto;
+		padding-right: 27px;
+		padding-left: 15px;
+		max-width: 1154px;
+	}
+
+	&__ltd-wrap {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 37%;
+	}
+
+	&__ltd {
+		left: 0;
+		top: 0;
+		display: block;
+		mask-image: url("../images/samsung.svg");
+		mask-position: center;
+		mask-repeat: no-repeat;
+		mask-size: cover;
+		padding-top: 25%;
+		width: 100%;
+		background-image: linear-gradient(90deg, rgba(246, 247, 248, 1) 0%, rgba(246, 247, 248, 1) 100%);
+		transition: background-image 0.2s ease-in-out;
+	}
+}
+
+.partner-block {
+	@include margin-right(4.62rem);
+
+	position: relative;
+	z-index: 1;
+	margin-bottom: 80px;
+	max-width: 524px;
+
+	&__top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 32px;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-weight: 700;
+		font-size: 13px;
+		text-transform: uppercase;
+		color: $color-blue;
+	}
+
+	&__link {
+		color: $color-green;
+
+		@include hover {
+			color: $color-green-hover;
+		}
+	}
+
+	&__brand {
+		position: relative;
+		flex: 1;
+		margin-left: 18px;
+		height: 1px;
+		background-color: $color-blue;
+	}
+
+	&__logo {
+		position: absolute;
+		left: calc(100% + 9px);
+		top: 50%;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		width: 127px;
+		height: 127px;
+		background-color: $color-blue;
+		transform: translateY(-50%);
+	}
+
+	&__info {
+		max-width: 476px;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 42px;
+		color: $color-black;
+		pointer-events: none;
+	}
+}
+
+.partner-picture {
+	position: relative;
+	overflow: hidden;
+	width: 394px;
+	height: 514px;
+
+	&__img-wrap {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		outline: 35px solid $color-white;
+		outline-offset: -38px;
+		border: 2px solid $color-blue;
+		border-radius: 50%;
+		width: 514px;
+		height: 510px;
+		transform: translate(-50%, -50%);
+	}
+
+	&__img {
+		width: 360px;
+		height: 360px;
+	}
+
+	&__circle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 370px;
+		height: 370px;
+		transform: translate(-50%, -50%);
+
+		svg {
+			fill: none;
+		}
+	}
+}
+
+.partner-btn {
+	animation: MoveUpDown 2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+	0%,
+	100% {
+		bottom: 0;
+	}
+
+	50% {
+		bottom: 30px;
+	}
+}
