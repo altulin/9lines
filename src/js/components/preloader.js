@@ -1,8 +1,9 @@
-import {animationHeader, animationControls} from './animation';
+import {animationHeader, animationControls, animationPartnerBlock} from './animationPartner';
 
 const startAfterPreload = () => {
 	animationHeader.play();
 	animationControls.play();
+	animationPartnerBlock.play();
 };
 
 const preloader = () => {

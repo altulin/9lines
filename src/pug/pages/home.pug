@@ -4,7 +4,7 @@ main.page-main
 		.preloader__logo
 			+svg('logo')
 		.preloader__status
-			span.preloader__status__number 100
+			span.preloader__status__number 0
 
 	section.controls
 		a.controls__link.controls__link--letter(href="mailto:info@ninelines.agency" data-text="Написать")
@@ -31,6 +31,7 @@ main.page-main
 												|
 												a.partner-block__link(href="/") для Samsung
 											.partner-block__brand
+												.partner-block__brand-line
 												.partner-block__logo
 													img.partner-block__logo-img(src="./images/rbk.png" alt="rbk" width=60 height=16)
 
@@ -50,49 +51,42 @@ main.page-main
 						button.partner-slider__btn.partner-slider__btn--prev(type="button")
 						button.partner-slider__btn.partner-slider__btn--next(type="button")
 
-			button.partner__btn.partner-btn(type="button")
-				span.partner-btn__text Скролльте вниз
+				button.partner__btn.partner-btn(type="button")
+					span.partner-btn__text Скролльте вниз
+
+			section.app__page.app-page.layout.swiper-slide
+				.app-page__inner.app-page__container.app-page__container--layout
+					figure.layout__img-wrap.layout-svg
+						<svg width="350" height="275" viewBox="0 0 350 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="layout-svg__rect layout-svg__rect-6" d="M1 3C1 1.89543 1.89543 1 3 1H347C348.105 1 349 1.89543 349 3V272C349 273.105 348.105 274 347 274H3.00001C1.89543 274 1 273.105 1 272V3Z" fill="none" stroke="#00284B" stroke-width="2"/>
+							<circle cx="29.5" cy="17.5" r="1.5" fill="#00284B"/>
+							<circle cx="21.5" cy="17.5" r="1.5" fill="#00284B"/>
+							<circle cx="13.5" cy="17.5" r="1.5" fill="#00284B"/>
+							<path class="layout-svg__rect layout-svg__rect-7"  d="M2 34H348.451" stroke="#00284B" stroke-width="2" stroke-linecap="square"/>
+							<path class="layout-svg__rect layout-svg__rect-4" d="M197 175H249V227H197V175Z" stroke="#00D741" fill="none" stroke-width="2"/>
+							<path class="layout-svg__rect layout-svg__rect-2" d="M32 175H84V227H32V175Z" stroke="#00D741" fill="none" stroke-width="2"/>
+							<path class="layout-svg__rect layout-svg__rect-3" d="M96.8065 227.5H145.22" stroke="#00D741" stroke-width="2" stroke-linecap="square"/>
+							<path class="layout-svg__rect layout-svg__rect-3" d="M96.8065 210.5H145.22" stroke="#00D741" stroke-width="2" stroke-linecap="square"/>
+							<path class="layout-svg__rect layout-svg__rect-3" d="M96.8065 192.5H145.22" stroke="#00D741" stroke-width="2" stroke-linecap="square"/>
+							<path class="layout-svg__rect layout-svg__rect-3" d="M96.8065 175.5H145.22" stroke="#00D741" stroke-width="2" stroke-linecap="square"/>
+							<path class="layout-svg__rect layout-svg__rect-5" d="M271.806 227.5H320.22" stroke="#00D741" stroke-width="2" stroke-linecap="square"/>
+							<path class="layout-svg__rect layout-svg__rect-5" d="M271.806 210.5H320.22" stroke="#00D741" stroke-width="2" stroke-linecap="square"/>
+							<path class="layout-svg__rect layout-svg__rect-5" d="M271.806 192.5H320.22" stroke="#00D741" stroke-width="2"/>
+							<path class="layout-svg__rect layout-svg__rect-5" d="M271.806 175.5H320.22" stroke="#00D741" stroke-width="2" stroke-linecap="square"/>
+							<path class="layout-svg__rect layout-svg__rect-1"  d="M32 58H318V149H32V58Z" stroke="#00D741" fill="none" stroke-width="2"/>
+						</svg>
+
+					h2.app-page__title.layout__title Верстаем и программируем промо-проекты
+
+			section.app__page.app-page.creative.swiper-slide
+				.app-page__inner.app-page__container.creative__inner
+					h2.app-page__title.creative__title Специализируемся на браузерных играх, креативной верстке и сложной анимации.
+
+					.creative__pictures.creative-pictures
+						figure.creative-pictures__img-wrap.creative-pictures__img-wrap--top
+
+						figure.creative-pictures__img-wrap.creative-pictures__img-wrap--bottom
 
 			section.app__page.app-page.promo.swiper-slide
 				.app-page__inner.app-page__container
-					h2.app-page__title промо
-			section.app__page.app-page.promo.swiper-slide
-				.app-page__inner.app-page__container
-					h2.app-page__title Технический партнер м11111111111111111111111
-			section.app__page.app-page.promo.swiper-slide
-				.app-page__inner.app-page__container
-					h2.app-page__title 5555555555555555555555555555555555555
-					5555555555555555555555555555555555555555555555
-
-	//- +lazyPicture({
-	//- 	src: `${baseDir}images/mem.jpg`,
-	//- 	alt: 'Мемчик',
-	//- }).home__picture#hello
-
-	//- p.home__text#necessarily
-	//- 	| Это стартовый шаблон для верстки!
-	//- 	br
-	//- 	br
-	//- 	| Обязательно посмотри реализацию:
-	//- 	br
-	//- 	| pug в папке #[code pug/(components|pages)],
-	//- 	br
-	//- 	| js в папке #[code js/(components|modules|pages)],
-	//- 	br
-	//- 	| scss в папке #[code scss/(components|pages)]
-	//- 	br
-	//- 	br
-	//- 	| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
-	//- 	br
-	//- 	br
-	//- 	| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
-
-	//- //- picture.home__picture.home__picture--2#bye
-	//- +lazyPicture({
-	//- 	src: `${baseDir}images/mem-2.jpg`,
-	//- 	alt: 'Мемчик 2',
-	//- }, [
-	//- 	{
-	//- 		srcset: `${baseDir}images/mem-2.jpg`,
-	//- 	}
-	//- ]).home__picture.home__picture--2#bye
+					h2.app-page__title Lorem ipsum dolor sit amet.

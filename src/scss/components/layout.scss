@@ -1,0 +1,21 @@
+.app-page {
+	&__container--layout {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		max-width: 1154px;
+	}
+
+	&__title {
+		max-width: 517px;
+	}
+}
+
+.layout {
+	display: flex;
+	align-items: center;
+
+	&__img-wrap {
+		@include margin-top(6rem);
+	}
+}
