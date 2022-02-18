@@ -1,5 +1,15 @@
 import {gsap} from 'gsap';
 import {appSlider} from './appSliderMain';
+import {SplitText} from 'gsap/SplitText';
+
+const animationTextPartner = gsap.timeline({paused: true});
+
+const mySplitText = new SplitText('.app-page__title--partner', {type: 'words, lines, chars'});
+const chars = mySplitText.chars;
+
+animationTextPartner.staggerFrom(chars, 0.5, {opacity: 0,
+	delay: 0,
+	y: 15}, 0.01);
 
 const path = document.querySelector('.partner-picture__circle circle');
 const line = path.getTotalLength();
@@ -75,5 +85,6 @@ export const animationPartnerBlock = gsap.from('.partner-block__info',
 		paused: true,
 		onComplete: () => {
 			animationPartnerBlockTop.restart();
+			animationTextPartner.restart();
 		},
 	});

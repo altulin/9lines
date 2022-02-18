@@ -1,6 +1,8 @@
 import Swiper, {EffectFade, Mousewheel} from 'swiper';
-import {animationSvg, startPosAnimation} from './animationLayout';
-// import {animationPartnerBlock} from './animationPartner';
+import {animationSvg, startPosAnimation, animationTextLayout} from './animationLayout';
+import {animationImgTop, animationImgBottom, animationText} from './animationCreative';
+import {animationPartnerBlock} from './animationPartner';
+import {animationCommandBg, animationPictures} from './animationCommand';
 
 export let appSlider;
 
@@ -16,6 +18,7 @@ export const createAppSliderMain = () => {
 			mousewheel: true,
 			speed: 1000,
 			enabled: false,
+			// initialSlide: 3,
 		});
 
 		appSlider.on('slideChange', () => {
@@ -23,11 +26,23 @@ export const createAppSliderMain = () => {
 			const prevIndex = appSlider.previousIndex;
 
 			if (index === 0) {
-				// animationPartnerBlock.restart();
+				animationPartnerBlock.restart();
 			}
 
 			if (index === 1) {
 				animationSvg.restart();
+				animationTextLayout.restart();
+			}
+
+			if (index === 2) {
+				animationImgTop.restart();
+				animationImgBottom.restart();
+				animationText.restart();
+			}
+
+			if (index === 3) {
+				animationCommandBg.restart();
+				animationPictures.restart();
 			}
 
 			if (prevIndex === 1) {

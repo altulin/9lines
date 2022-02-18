@@ -376,8 +376,8 @@ gulp.task('watch', () => {
 	gulp.watch('src/scss/**/*.scss', gulp.series('lint:scss', 'scss'));
 	// gulp.watch('src/scss/**/*.scss', gulp.series('scss'));
 
-	// gulp.watch('src/js/**/*.js', gulp.series('lint:js', 'js'));
-	gulp.watch('src/js/**/*.js', gulp.series('js'));
+	gulp.watch('src/js/**/*.js', gulp.series('lint:js', 'js'));
+	// gulp.watch('src/js/**/*.js', gulp.series('js'));
 });
 
 gulp.task('serve', () => {

@@ -1,0 +1,31 @@
+.command {
+	display: flex;
+
+	&__img {
+		opacity: 0;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1185px;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex: 1;
+		background-image: linear-gradient(90deg, rgba($color-blue, 1) 0%, rgba($color-blue, 1) 100%);
+		background-position: left center;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+.command__pictures {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+}

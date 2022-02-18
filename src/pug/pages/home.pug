@@ -18,7 +18,7 @@ main.page-main
 		.app__inner.swiper-wrapper
 			section.app__page.app-page.partner.swiper-slide
 				.app-page__inner.app-page__container
-					h2.app-page__title.app-page__title--partner Технический партнер медиа и сми в разработке спецпроектов и промо
+					h2.app-page__title.app-page__title--partner Технический партнер <br>медиа и сми в&nbsp;разработке<br> спецпроектов и промо
 
 					.partner__slider.partner-slider.swiper
 						.partner-slider__inner.swiper-wrapper
@@ -80,12 +80,31 @@ main.page-main
 
 			section.app__page.app-page.creative.swiper-slide
 				.app-page__inner.app-page__container.creative__inner
-					h2.app-page__title.creative__title Специализируемся на браузерных играх, креативной верстке и сложной анимации.
+					h2.app-page__title.creative__title Специализируемся на браузерных играх, креативной&nbsp;верстке и сложной анимации.
 
 					.creative__pictures.creative-pictures
+						figure.creative-pictures__img-wrap.creative-pictures__img-wrap--top.creative-pictures--top
+
+						figure.creative-pictures__img-wrap.creative-pictures__img-wrap--bottom.creative-pictures--bottom
+
+			section.app__page.app-page.command.swiper-slide
+				.command__wrapper
+					.app-page__inner.app-page__container.command__inner
+						.command__block.command-block
+							h2.command__title.command-title
+								span.command-title__green наша команда
+								| Любит и умеет делать
+
+							ul.command__list.skills
+								each item, val in data.command
+									li.skills__item
+										span.skills__num= `0${val+1}`
+										p.skills__text= item
+
+					.command__pictures.creative-pictures
 						figure.creative-pictures__img-wrap.creative-pictures__img-wrap--top
 
-						figure.creative-pictures__img-wrap.creative-pictures__img-wrap--bottom
+						figure.creative-pictures__img-wrap.creative-pictures__img-wrap--bottom.command__img
 
 			section.app__page.app-page.promo.swiper-slide
 				.app-page__inner.app-page__container

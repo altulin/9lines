@@ -1,5 +1,15 @@
 import {gsap} from 'gsap';
 import {appSlider} from './appSliderMain';
+import {SplitText} from 'gsap/SplitText';
+
+export const animationTextLayout = gsap.timeline({paused: true});
+
+const mySplitText = new SplitText('.layout__title', {type: 'words, lines, chars'});
+const chars = mySplitText.chars;
+
+animationTextLayout.staggerFrom(chars, 0.5, {opacity: 0,
+	delay: 0,
+	y: 15}, 0.01);
 
 const pathRect7 = document.querySelector('.layout-svg__rect-7');
 pathRect7.style.strokeDasharray = pathRect7.getTotalLength();
